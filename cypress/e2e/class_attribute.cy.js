@@ -8,7 +8,7 @@ describe('class attributes may contain more than one class refrence', function (
        cy.on('window:alert', (alertText) => {
         expect(alertText).to.equal('Primary button pressed');
 
-
+const name = 'ph'
 
         // cy.get('#alert').contains('Primary button pressed');
         // cy.get('button').contains('OK').click();

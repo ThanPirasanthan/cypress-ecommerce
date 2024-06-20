@@ -25,12 +25,38 @@ cy.visit("https://www.way2automation.com/way2auto_jquery/");
 
   });
 
+  const CredDataSet = [
+    { username: 'pj', 
+      password: 'london'
+
+    },
+    { username: 'than', 
+      password: 'london'
+
+    },
+    { username: 'ella', 
+      password: 'london'
+
+    },
+  ]
  
-  it('test3', () => {
-    cy.get('a.fancybox[href="#login"]').click();
-    cy.get('#login > #load_form > :nth-child(5) > input').type('Username123');
-    cy.get('#login > #load_form > :nth-child(6) > input').type('Testing_Password1234!');
+  it.only('test3', () => {
+    for(const cred of CredDataSet) {
+      
+
+      cy.get('a.fancybox[href="#login"]').click();
+    cy.get('#login > #load_form > :nth-child(5) > input').type(cred.username);
+    cy.get('#login > #load_form > :nth-child(6) > input').type(cred.password);
     cy.get(':nth-child(8) > .span_3_of_4 > :nth-child(1) > .fancybox').click();
+    cy.visit("https://www.way2automation.com/way2auto_jquery/");
+    }
+    
+'    // const username = Cypress.env('username')
+    // const password = Cypress.env('password')
+    // cy.get('a.fancybox[href="#login"]').click();
+    // cy.get('#login > #load_form > :nth-child(5) > input').type(username);
+    // cy.get('#login > #load_form > :nth-child(6) > input').type(password);
+    // cy.get(':nth-child(8) > .span_3_of_4 > :nth-child(1) > .fancybox').click();'
     
 
 })});

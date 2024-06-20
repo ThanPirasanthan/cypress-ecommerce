@@ -26,3 +26,4 @@
 import 'cypress-iframe';
 
 Cypress.on('uncaught:exception', () => { return false })
+import '@testing-library/cypress/add-commands'

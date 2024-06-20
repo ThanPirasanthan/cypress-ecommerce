@@ -19,6 +19,8 @@ describe('allow elements to be moved using the mouse', function () {
         // // Collapse Section 2
         // cy.get('#accordion > h3').eq(1).click();
         // cy.get('#accordion > div').eq(1).should('not.be.visible');
+
+        
     });
   });
   
